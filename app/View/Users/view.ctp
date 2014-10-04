@@ -1,3 +1,2 @@
 
-<p><?php echo h($user); ?></p>
-
+<h1><?php echo $user['User']['username']. " page" ?></h1>
