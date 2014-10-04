@@ -30,3 +30,6 @@ CREATE TABLE users (
     created DATETIME DEFAULT NULL,
     modified DATETIME DEFAULT NULL
 );
+
+/* Userモデルへの参照のため、postsテーブルにuser_idを追加 */
+ALTER TABLE posts ADD COLUMN user_id INT(11);
