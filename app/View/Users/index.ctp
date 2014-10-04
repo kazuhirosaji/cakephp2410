@@ -10,7 +10,7 @@
 	<?php foreach ($users as $user): ?>
 	<tr>
 		<td><?php echo $user['User']['id']; ?></td>
-		<td><?php echo $user['User']['username']; ?></td>
+		<td><?php echo $this->Html->link($user['User']['username'], array('action' => 'view', $user['User']['id'])); ?></td>
 		<td><?php echo $user['User']['role']; ?></td>
 	</tr>
 	<?php endforeach; ?>
