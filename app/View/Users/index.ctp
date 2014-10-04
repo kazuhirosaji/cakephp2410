@@ -1,4 +1,3 @@
-<p><?php var_dump($users); ?></p>
 <h1>Users</h1>
 <table>
 	<tr>
