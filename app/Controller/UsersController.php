@@ -31,6 +31,11 @@ class UsersController extends AppController {
 			throw new NotFoundException(__('Invalid user'));
 		}
 		$this->set('user', $this->User->read(null, $id));
+		$this->loadModel('Post');
+		$this->set('posts', $this->Post->find('all', 
+			array('conditions' => array('Post.user_id' => $this->User->id))
+			)
+		);
 	}
 
 	public function add() {
